@@ -1,0 +1,109 @@
+// ******variables******
+// ***colors***
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+$darkGray: hsl(0, 0%, 55%);
+$veryDarkGray: hsl(0, 0%, 41%);
+// ***fonts***
+$fontAlata: "Alata", sans-serif;
+$fontJosefinSans: "Josefin Sans", sans-serif;
+
+// ***mixins***
+@mixin flex($dir, $align, $justify) {
+  display: flex;
+  flex-flow: $dir;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin grid($temp-columns, $temp-rows, $gap) {
+  display: grid;
+  grid-template-columns: $temp-columns;
+  grid-template-rows: $temp-rows;
+  gap: $gap;
+}
+
+@mixin bodyEssentials($bgColor, $color) {
+  background-color: $bgColor;
+  color: $color;
+  min-height: 100vh;
+  min-width: 100vw;
+  max-width: 1980px;
+  overflow: auto;
+}
+
+@mixin font(
+  $family: false,
+  $size: false,
+  $style: false,
+  $weight: false,
+  $lineHeight: false
+) {
+  @if $family {
+    font-family: $family;
+  }
+  @if $size {
+    font-size: $size;
+  }
+  @if $style {
+    font-style: $style;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $lineHeight {
+    line-height: $lineHeight;
+  }
+}
+
+@mixin position(
+  $type,
+  $top: false,
+  $right: false,
+  $bottom: false,
+  $left: false,
+  $transform: false
+) {
+  position: $type;
+  @if $top {
+    top: $top;
+  }
+  @if $right {
+    right: $right;
+  }
+  @if $bottom {
+    bottom: $bottom;
+  }
+  @if $left {
+    left: $left;
+  }
+  @if $transform {
+    transform: $transform;
+  }
+}
+
+@mixin centerItem($top: false, $bottom: false) {
+  @if $top not $bottom {
+    margin: $top auto 0;
+  }
+  @if $bottom not $top {
+    margin: 0 auto $bottom;
+  }
+  @if $top and $bottom {
+    margin: $top auto $bottom;
+  }
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin wildcard() {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

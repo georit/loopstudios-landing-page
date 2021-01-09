@@ -1,0 +1,13 @@
+// ******general styles******
+* {
+  @include wildcard();
+}
+
+body {
+  @include font($fontAlata, 15px);
+  @include bodyEssentials($white, $veryDarkGray);
+}
+
+img {
+  max-width: 100%;
+}

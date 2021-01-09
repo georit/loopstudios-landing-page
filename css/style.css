@@ -1,0 +1,21 @@
+/* ******general styles****** */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Alata", sans-serif;
+  font-size: 15px;
+  background-color: white;
+  color: dimgray;
+  min-height: 100vh;
+  min-width: 100vw;
+  max-width: 1980px;
+  overflow: auto;
+}
+
+img {
+  max-width: 100%;
+}
