@@ -1,0 +1,46 @@
+footer {
+  background-color: $black;
+  @include padding(3rem, 6%, 3rem, 6%);
+  text-align: center;
+
+  nav {
+    width: 100%;
+
+    .logo {
+      width: 150px;
+      padding-bottom: 1.5rem;
+    }
+
+    .nav-links {
+      list-style-type: none;
+
+      .nav-link {
+        font-size: 0.9rem;
+        padding-bottom: 1rem;
+        @include transition(all 0.2s);
+      }
+    }
+  }
+
+  .misc {
+    padding-top: 1rem;
+    width: 100%;
+
+    .social-media {
+      padding-bottom: 0.6rem;
+      width: 100%;
+
+      .social-media-link {
+        cursor: pointer;
+        margin-right: 1rem;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .copy {
+      font-size: 0.8rem;
+    }
+  }
+}

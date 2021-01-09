@@ -1,0 +1,24 @@
+nav {
+  @include flex(row wrap, center, space-between);
+  position: relative;
+
+  .nav-links {
+    @include flex(column nowrap, flex-start, center);
+    @include position(absolute, 100%, 0, null, 0, null);
+    @include padding(5rem, null, 5rem, null);
+    width: 100%;
+    background-color: $black;
+    list-style-type: none;
+    display: none;
+
+    .nav-link {
+      @include padding(1.5rem, null, null, null);
+      @include font($fontJosefinSans, 23px);
+      @include transition(all 0.2s);
+    }
+  }
+
+  .mobile-nav-toggle {
+    cursor: pointer;
+  }
+}

@@ -107,3 +107,33 @@ $fontJosefinSans: "Josefin Sans", sans-serif;
   margin: 0;
   padding: 0;
 }
+
+@mixin background($bgImg, $bgPosition, $bgSize, $bgRepeat, $bgColor) {
+  background-image: $bgImg;
+  background-position: $bgPosition;
+  background-size: $bgSize;
+  background-repeat: $bgRepeat;
+  background-color: $bgColor;
+}
+
+@mixin padding($top, $right, $bottom, $left) {
+  padding-top: $top;
+  padding-right: $right;
+  padding-bottom: $bottom;
+  padding-left: $left;
+}
+
+@mixin margin($top, $right, $bottom, $left) {
+  margin-top: $top;
+  margin-right: $right;
+  margin-bottom: $bottom;
+  margin-left: $left;
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}

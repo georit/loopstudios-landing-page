@@ -5,9 +5,26 @@
 
 body {
   @include font($fontAlata, 15px);
-  @include bodyEssentials($white, $veryDarkGray);
+  @include bodyEssentials($white, $darkGray);
 }
 
 img {
   max-width: 100%;
+}
+
+a:link,
+a:visited {
+  color: $white;
+  text-decoration: none;
+}
+
+.heading {
+  color: $black;
+  font-family: $fontJosefinSans;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+h2.heading {
+  font-size: 1.8rem;
 }

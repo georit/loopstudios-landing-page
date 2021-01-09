@@ -1,0 +1,19 @@
+.intro {
+  @include padding(6rem, 6%, 6rem, 6%);
+  width: 100%;
+
+  .intro-img-container,
+  .intro-text {
+    width: 100%;
+  }
+
+  .intro-text {
+    background-color: $white;
+    @include padding(2.5rem, 1.5rem, null, 1.5rem);
+    text-align: center;
+
+    .intro-heading {
+      padding-bottom: 1.5rem;
+    }
+  }
+}
