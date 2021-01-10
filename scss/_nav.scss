@@ -5,7 +5,7 @@ nav {
   .nav-links {
     @include flex(column nowrap, flex-start, center);
     @include position(absolute, 100%, 0, null, 0, null);
-    @include padding(5rem, null, 5rem, null);
+    @include padding(10rem, null, 5rem, null);
     width: 100%;
     background-color: $black;
     list-style-type: none;

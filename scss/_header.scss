@@ -23,5 +23,9 @@ header {
 
 header.nav-expanded {
   @include background(none, unset, unset, null, $black);
-  min-width: 100vh;
+  min-height: 100vh;
+
+  .nav-links {
+    display: flex;
+  }
 }
