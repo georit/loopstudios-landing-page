@@ -80,15 +80,65 @@ header nav .nav-links {
   display: none;
 }
 
+@media only screen and (min-width: 1100px) {
+  header nav .nav-links {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    position: static;
+    top: unset;
+    right: unset;
+    left: unset;
+    width: max-content;
+    padding: 0;
+    background-color: transparent;
+  }
+}
+
 header nav .nav-links .nav-link {
   padding-top: 1.5rem;
   font-family: "Josefin Sans", sans-serif;
   font-size: 23px;
   transition: all 0.2s;
+  transition: all 0.2s;
+  text-transform: uppercase;
+}
+
+header nav .nav-links .nav-link .nav-link-anchor {
+  transition: all 0.2s;
+}
+
+@media only screen and (min-width: 1100px) {
+  header nav .nav-links .nav-link {
+    padding: 0 0 0 1.5rem;
+    font-size: 16px;
+    text-transform: capitalize;
+    position: relative;
+  }
+  header nav .nav-links .nav-link:hover .nav-link-anchor {
+    transition: all 0.2s;
+  }
+  header nav .nav-links .nav-link:hover .nav-link-anchor::after {
+    content: "";
+    height: 2px;
+    width: 30%;
+    background-color: white;
+    position: absolute;
+    left: 70%;
+    transform: translateX(-50%);
+    top: 130%;
+  }
 }
 
 header nav .mobile-nav-toggle {
   cursor: pointer;
+}
+
+@media only screen and (min-width: 1100px) {
+  header nav .mobile-nav-toggle {
+    display: none;
+  }
 }
 
 header .main-heading {
@@ -98,6 +148,20 @@ header .main-heading {
   line-height: 1.2;
   margin-top: 8rem;
   padding: 1rem 1.5rem;
+  max-width: 370px;
+}
+
+@media only screen and (min-width: 1100px) {
+  header {
+    background-image: url(../images/desktop/image-hero.jpg);
+    background-position: 100% 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 5rem;
+  }
+  header .main-heading {
+    margin-top: 6rem;
+  }
 }
 
 header.nav-expanded {
@@ -121,9 +185,29 @@ header.nav-expanded .nav-links {
   width: 100%;
 }
 
+@media only screen and (min-width: 1100px) {
+  .intro {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding-top: 6rem;
+    padding-right: 10%;
+    padding-bottom: 6rem;
+    padding-left: 10%;
+  }
+}
+
 .intro .intro-img-container,
 .intro .intro-text {
+  margin: 0 auto;
+  max-width: 730px;
   width: 100%;
+}
+
+@media only screen and (min-width: 1100px) {
+  .intro .intro-img-container {
+    grid-area: 1 / 1 / span 3 / span 4;
+  }
 }
 
 .intro .intro-text {
@@ -132,6 +216,16 @@ header.nav-expanded .nav-links {
   padding-right: 1.5rem;
   padding-left: 1.5rem;
   text-align: center;
+}
+
+@media only screen and (min-width: 1100px) {
+  .intro .intro-text {
+    grid-area: 2 / 4 / span 2 / span 3;
+    text-align: left;
+    padding-left: 5rem;
+    padding-right: 0;
+    padding-top: 5rem;
+  }
 }
 
 .intro .intro-text .intro-heading {
@@ -145,6 +239,18 @@ header.nav-expanded .nav-links {
   padding-left: 6%;
   position: relative;
   width: 100%;
+  max-width: 575px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 1100px) {
+  .our-creations {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 2.5rem;
+    max-width: 1440px;
+  }
 }
 
 .our-creations .our-creations-heading {
@@ -152,19 +258,32 @@ header.nav-expanded .nav-links {
   padding-bottom: 2.5rem;
 }
 
-.our-creations .creations,
-.our-creations .creation {
-  width: 100%;
+@media only screen and (min-width: 1100px) {
+  .our-creations .our-creations-heading {
+    grid-area: 1 / 1 / auto / span 1;
+    text-align: left;
+    padding-bottom: 0;
+  }
 }
 
-.our-creations .creations .creation,
-.our-creations .creation .creation {
+@media only screen and (min-width: 1100px) {
+  .our-creations .creations {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 1rem;
+    grid-area: 2 / 1 / auto / span 2;
+  }
+}
+
+.our-creations .creations .creation {
+  width: 100%;
   margin-bottom: 1rem;
   position: relative;
+  text-align: center;
 }
 
-.our-creations .creations .creation .creation-name,
-.our-creations .creation .creation .creation-name {
+.our-creations .creations .creation .creation-name {
   color: white;
   position: absolute;
   bottom: 15px;
@@ -189,6 +308,18 @@ header.nav-expanded .nav-links {
   left: 50%;
   transform: translate(-50%, -50%);
   transition: all 0.2s;
+}
+
+@media only screen and (min-width: 1100px) {
+  .our-creations .btn-see-all {
+    grid-area: 1 / 2 / auto / span 1;
+    position: static;
+    bottom: unset;
+    left: unset;
+    transform: unset;
+    width: max-content;
+    justify-self: flex-end;
+  }
 }
 
 /* ******footer****** */

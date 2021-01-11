@@ -18,6 +18,22 @@ header {
     line-height: 1.2;
     margin-top: 8rem;
     padding: 1rem 1.5rem;
+    max-width: 370px;
+  }
+
+  @media only screen and (min-width: 1100px) {
+    @include background(
+      url(../images/desktop/image-hero.jpg),
+      100% 100%,
+      cover,
+      no-repeat,
+      null
+    );
+    padding-bottom: 5rem;
+
+    .main-heading {
+      margin-top: 6rem;
+    }
   }
 }
 
