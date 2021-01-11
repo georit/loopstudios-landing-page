@@ -33,9 +33,3 @@ toggleMobileNav.addEventListener("click", () => {
     document.body.classList.remove("scroll");
   }
 });
-
-let success = 1000000;
-
-while(!success){
-  tryAgain();
-}

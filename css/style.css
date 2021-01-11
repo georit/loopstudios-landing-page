@@ -37,6 +37,12 @@ h2.heading {
   font-size: 1.8rem;
 }
 
+@media only screen and (min-width: 1100px) {
+  h2.heading {
+    font-size: 2.5rem;
+  }
+}
+
 .scroll {
   height: 100vh;
   overflow: hidden;
@@ -111,6 +117,7 @@ header nav .nav-links .nav-link .nav-link-anchor {
 
 @media only screen and (min-width: 1100px) {
   header nav .nav-links .nav-link {
+    font-family: "Alata", sans-serif;
     padding: 0 0 0 1.5rem;
     font-size: 16px;
     text-transform: capitalize;
@@ -218,6 +225,10 @@ header.nav-expanded .nav-links {
   text-align: center;
 }
 
+.intro .intro-text .intro-heading {
+  padding-bottom: 1.5rem;
+}
+
 @media only screen and (min-width: 1100px) {
   .intro .intro-text {
     grid-area: 2 / 4 / span 2 / span 3;
@@ -226,10 +237,9 @@ header.nav-expanded .nav-links {
     padding-right: 0;
     padding-top: 5rem;
   }
-}
-
-.intro .intro-text .intro-heading {
-  padding-bottom: 1.5rem;
+  .intro .intro-text .intro-heading {
+    padding-right: 20%;
+  }
 }
 
 /* ******our creations****** */
@@ -241,16 +251,6 @@ header.nav-expanded .nav-links {
   width: 100%;
   max-width: 575px;
   margin: 0 auto;
-}
-
-@media only screen and (min-width: 1100px) {
-  .our-creations {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    gap: 2.5rem;
-    max-width: 1440px;
-  }
 }
 
 .our-creations .our-creations-heading {
@@ -266,14 +266,8 @@ header.nav-expanded .nav-links {
   }
 }
 
-@media only screen and (min-width: 1100px) {
-  .our-creations .creations {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto;
-    gap: 1rem;
-    grid-area: 2 / 1 / auto / span 2;
-  }
+.our-creations .creations {
+  width: 100%;
 }
 
 .our-creations .creations .creation {
@@ -292,6 +286,28 @@ header.nav-expanded .nav-links {
   font-size: 1.2rem;
   letter-spacing: 0.5px;
   line-height: 1.2;
+  text-align: left;
+}
+
+@media only screen and (min-width: 1100px) {
+  .our-creations .creations .creation .creation-name {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .our-creations .creations {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .our-creations .creations .creation {
+    max-width: 256px;
+  }
 }
 
 .our-creations .btn-see-all {
@@ -308,6 +324,7 @@ header.nav-expanded .nav-links {
   left: 50%;
   transform: translate(-50%, -50%);
   transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 @media only screen and (min-width: 1100px) {
@@ -320,6 +337,23 @@ header.nav-expanded .nav-links {
     width: max-content;
     justify-self: flex-end;
   }
+  .our-creations .btn-see-all:hover {
+    background-color: black;
+    color: white;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .our-creations {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 2.5rem;
+    max-width: 1440px;
+  }
+  .our-creations .creations {
+    grid-area: 2 / 1 / auto / span 2;
+  }
 }
 
 /* ******footer****** */
@@ -330,6 +364,16 @@ footer {
   padding-bottom: 3rem;
   padding-left: 6%;
   text-align: center;
+}
+
+@media only screen and (min-width: 1100px) {
+  footer {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+  }
 }
 
 footer nav {
@@ -349,6 +393,27 @@ footer nav .nav-links .nav-link {
   font-size: 0.9rem;
   padding-bottom: 1rem;
   transition: all 0.2s;
+}
+
+@media only screen and (min-width: 1100px) {
+  footer nav .nav-links {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+  footer nav .nav-links .nav-link {
+    margin-right: 1.5rem;
+    padding-bottom: 0;
+  }
+  footer nav .nav-links .nav-link:last-child {
+    margin-right: 0;
+  }
+  footer nav .nav-links .nav-link .nav-link-anchor {
+    transition: all 0.2s;
+  }
+  footer nav .nav-links .nav-link .nav-link-anchor:hover {
+    color: #8c8c8c;
+  }
 }
 
 footer .misc {
@@ -372,4 +437,21 @@ footer .misc .social-media .social-media-link:last-child {
 
 footer .misc .copy {
   font-size: 0.8rem;
+}
+
+@media only screen and (min-width: 1100px) {
+  footer .misc {
+    padding-top: 0;
+    text-align: right;
+  }
+  footer .misc .social-media {
+    padding-bottom: 1.5rem;
+  }
+  footer .misc .social-media svg path {
+    pointer-events: none;
+    transition: all 0.2s;
+  }
+  footer .misc .social-media svg:hover path {
+    fill: #8c8c8c;
+  }
 }
