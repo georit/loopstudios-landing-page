@@ -1,7 +1,6 @@
 /* ******variables****** */
 const toggleMobileNav = document.getElementById("mobile-nav-toggle");
 const headerEl = document.querySelector("header");
-
 /* ******functions****** */
 
 /* ******event listeners****** */
@@ -34,3 +33,9 @@ toggleMobileNav.addEventListener("click", () => {
     document.body.classList.remove("scroll");
   }
 });
+
+let success = 1000000;
+
+while(!success){
+  tryAgain();
+}
